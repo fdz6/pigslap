@@ -1,6 +1,6 @@
 -- This lua script is not my script, credits to who made this
 
-local library = loadstring(game:HttpGet("https://pastebin.com/raw/kexBJPXV", true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/chinesepiggy/chinesepiggy_library.lua", true))()
 
 local tab1 = library:CreateTab("  Piggy Godmode", true)
 local button = library:MakeButton(tab1,"on",function(button)

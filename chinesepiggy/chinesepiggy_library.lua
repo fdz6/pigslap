@@ -1,4 +1,5 @@
--- Join the discord to be the first to know of updates! discord.gg/7Cb8bS2
+-- This lua script is not my script, credits to who made this
+
 local function randomName()
 	local data = ""
 	for i=0,20,1 do
