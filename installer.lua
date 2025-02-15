@@ -116,7 +116,7 @@ MainPiggy.TextSize = 14.000
 MainPiggy.TextWrapped = true
 MainPiggy.MouseButton1Click:Connect(function()
     game.Players.LocalPlayer.PlayerGui.PigslapInstaller:Destroy()
-    loadstring(game:HttpGet("https://pastebin.com/raw/kZhUGxHP", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/mainpiggy/mainpiggy.lua", true))()
 end)
 
 ChinesePiggy.Name = "ChinesePiggy"
@@ -134,7 +134,7 @@ ChinesePiggy.TextSize = 14.000
 ChinesePiggy.TextWrapped = true
 ChinesePiggy.MouseButton1Click:Connect(function()
     game.Players.LocalPlayer.PlayerGui.PigslapInstaller:Destroy()
-    loadstring(game:HttpGet("https://pastebin.com/raw/0GMCyCgx", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/chinesepiggy/chinesepiggy.lua", true))()
 end)
 
 EpicTankEngine.Name = "EpicTankEngine"
@@ -166,7 +166,7 @@ JSKit.TextSize = 14.000
 JSKit.TextWrapped = true
 JSKit.MouseButton1Click:Connect(function()
     game.Players.LocalPlayer.PlayerGui.PigslapInstaller:Destroy()
-    loadstring(game:HttpGet("https://pastebin.com/raw/eRw18xQu", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/js/js.lua", true))()
 end)
 
 PacifistKit.Name = "PacifistKit"
