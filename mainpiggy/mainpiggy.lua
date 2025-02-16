@@ -703,25 +703,25 @@ local function WSPZD_fake_script() -- Menu.LocalScript
 	    if _G.Respawn == false then
 	        _G.Respawn = true
 	        game.CoreGui["Pigslap-MainPiggy"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-	        if game.CoreGui.MainMenu.PlayMenu.Visible == true then
-	            if game.CoreGui.MainMenu.PlayMenu.Visible == true and game.CoreGui.MainMenu.PlayMenu.SpectateMenu.Visible == true then
-	                for _, respawn_function in pairs(game.CoreGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
+	        if game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.Visible == true then
+	            if game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.Visible == true and game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu.Visible == true then
+	                for _, respawn_function in pairs(game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
 	                    if respawn_function.Name == "BecomeGhost" then
-	                        for _, disable_spectate in pairs(game.CoreGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
+	                        for _, disable_spectate in pairs(game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
 	                            if disable_spectate.Name == "BecomeGhost" then
 	                                disable_spectate.Visible = false
 	                            end
 	                        end
-	                        if not game.CoreGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
+	                        if not game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
 	                            local respawn_button = respawn_function:Clone()
-	                            respawn_button.Parent = game.CoreGui.MainMenu.PlayMenu.SpectateMenu
+	                            respawn_button.Parent = game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu
 	                            respawn_button.Name = "Respawn"
 	                            respawn_button.Text = "Respawn"
 	                            respawn_button.Visible = true
 	                            respawn_button.MouseButton1Click:Connect(function()
-	                                game.CoreGui.MainMenu.Theme:Stop()
-	                                game.CoreGui.MainMenu.Vignette.Visible = false
-	                                game.CoreGui.MainMenu.PlayMenu.Visible = false
+	                                game.Players.LocalPlayer.PlayerGui.MainMenu.Theme:Stop()
+	                                game.Players.LocalPlayer.PlayerGui.MainMenu.Vignette.Visible = false
+	                                game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.Visible = false
 	                                local player = game.Players.LocalPlayer
 	                                local character = player.Character or player.CharacterAdded:Wait()
 	                                local camera = workspace.CurrentCamera
@@ -776,17 +776,17 @@ local function WSPZD_fake_script() -- Menu.LocalScript
 	    else
 	        _G.Respawn = false
 	        game.CoreGui["Pigslap-MainPiggy"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-	        if game.CoreGui.MainMenu.PlayMenu.Visible == true then
-	            if game.CoreGui.MainMenu.PlayMenu.Visible == true and game.CoreGui.MainMenu.PlayMenu.SpectateMenu.Visible == true then
-	                for _, respawn_function in pairs(game.CoreGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
+	        if game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.Visible == true then
+	            if game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.Visible == true and game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu.Visible == true then
+	                for _, respawn_function in pairs(game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
 	                    if respawn_function.Name == "BecomeGhost" then
-	                        for _, enable_spectate in pairs(game.CoreGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
+	                        for _, enable_spectate in pairs(game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
 	                            if enable_spectate.Name == "BecomeGhost" then
 	                                enable_spectate.Visible = true
 	                            end
 	                        end
-	                        if game.CoreGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
-	                            game.CoreGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn"):Destroy()
+	                        if game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
+	                            game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn"):Destroy()
 	                        end
 	                    end
 	                end
@@ -817,15 +817,15 @@ local function WSPZD_fake_script() -- Menu.LocalScript
 	workspace.GameFolder.MainInfo:GetPropertyChangedSignal("Value"):Connect(function()
 	    if workspace.GameFolder.MainInfo.Value == "Game Over" then
 	        task.wait(4)
-	        game.CoreGui.MainMenu.Title.Visible = true
-	        game.CoreGui.MainMenu.Play.Visible = true
-	        game.CoreGui.MainMenu.ItemsFrame.Visible = true
-	        game.CoreGui.MainMenu.SkinsFrame.Visible = true
-	        game.CoreGui.MainMenu.PagesFrame.Visible = true
-	        game.CoreGui.MainMenu.BuildFrame.Visible = true
-	        game.CoreGui.MainMenu.Vignette.Visible = true
-	        game.CoreGui.MainMenu.BookTPButton.Visible = true
-	        game.CoreGui.MainMenu.FlashLight.Visible = true
+	        game.Players.LocalPlayer.PlayerGui.MainMenu.Title.Visible = true
+	        game.Players.LocalPlayer.PlayerGui.MainMenu.Play.Visible = true
+	        game.Players.LocalPlayer.PlayerGui.MainMenu.ItemsFrame.Visible = true
+	        game.Players.LocalPlayer.PlayerGui.MainMenu.SkinsFrame.Visible = true
+	        game.Players.LocalPlayer.PlayerGui.MainMenu.PagesFrame.Visible = true
+	        game.Players.LocalPlayer.PlayerGui.MainMenu.BuildFrame.Visible = true
+	        game.Players.LocalPlayer.PlayerGui.MainMenu.Vignette.Visible = true
+	        game.Players.LocalPlayer.PlayerGui.MainMenu.BookTPButton.Visible = true
+	        game.Players.LocalPlayer.PlayerGui.MainMenu.FlashLight.Visible = true
 	        game.Players.LocalPlayer.Character:PivotTo(workspace.GameFolder.ResetSpawn.CFrame)
 	        game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").Health = 0
 	    end
