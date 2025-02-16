@@ -49,7 +49,7 @@ local OpenMenu = Instance.new("TextButton")
 --Properties:
 
 PigslapMainPiggy.Name = "Pigslap-MainPiggy"
-PigslapMainPiggy.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PigslapMainPiggy.Parent = game.CoreGui
 PigslapMainPiggy.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Menu.Name = "Menu"
@@ -587,11 +587,11 @@ local function WSPZD_fake_script() -- Menu.LocalScript
 	_G.Respawn = false
 	_G.GodMode = false
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Archivable = true
+	game.CoreGui["Pigslap-MainPiggy"].Archivable = true
 	
 	local UIS = game:GetService('UserInputService')
-	local dragLocation = game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Drag
-	local frame = game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu
+	local dragLocation = game.CoreGui["Pigslap-MainPiggy"].Menu.Drag
+	local frame = game.CoreGui["Pigslap-MainPiggy"].Menu
 	local dragToggle = nil
 	local dragSpeed = 0.15
 	local dragStart = nil
@@ -625,103 +625,103 @@ local function WSPZD_fake_script() -- Menu.LocalScript
 		end
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].OpenMenu.MouseButton1Click:Connect(function()
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visible = true
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].OpenMenu.Visible = false
+	game.CoreGui["Pigslap-MainPiggy"].OpenMenu.MouseButton1Click:Connect(function()
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.Visible = true
+	    game.CoreGui["Pigslap-MainPiggy"].OpenMenu.Visible = false
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Minimize.MouseButton1Click:Connect(function()
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].OpenMenu.Visible = true
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visible = false
+	game.CoreGui["Pigslap-MainPiggy"].Menu.Minimize.MouseButton1Click:Connect(function()
+	    game.CoreGui["Pigslap-MainPiggy"].OpenMenu.Visible = true
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.Visible = false
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Close.MouseButton1Click:Connect(function()
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"]:Destroy()
+	game.CoreGui["Pigslap-MainPiggy"].Menu.Close.MouseButton1Click:Connect(function()
+	    game.CoreGui["Pigslap-MainPiggy"]:Destroy()
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Main.MouseButton1Click:Connect(function()
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Main.BackgroundTransparency = 0
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Main.TextTransparency = 0
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Exploits.BackgroundTransparency = 0.7
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Exploits.TextTransparency = 0.5
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visuals.BackgroundTransparency = 0.7
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visuals.TextTransparency = 0.5
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Places.BackgroundTransparency = 0.7
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Places.TextTransparency = 0.5
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Main.Visible = true
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Exploits.Visible = false
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Visuals.Visible = false
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Places.Visible = false
+	game.CoreGui["Pigslap-MainPiggy"].Menu.Main.MouseButton1Click:Connect(function()
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.Main.BackgroundTransparency = 0
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.Main.TextTransparency = 0
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.Exploits.BackgroundTransparency = 0.7
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.Exploits.TextTransparency = 0.5
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.Visuals.BackgroundTransparency = 0.7
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.Visuals.TextTransparency = 0.5
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.Places.BackgroundTransparency = 0.7
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.Places.TextTransparency = 0.5
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.List.Main.Visible = true
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.List.Exploits.Visible = false
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.List.Visuals.Visible = false
+	    game.CoreGui["Pigslap-MainPiggy"].Menu.List.Places.Visible = false
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Exploits.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Main.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Main.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Exploits.BackgroundTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Exploits.TextTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visuals.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visuals.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Places.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Places.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Main.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Exploits.Visible = true
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Visuals.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Places.Visible = false
+	game.CoreGui["Pigslap-MainPiggy"].Menu.Exploits.MouseButton1Click:Connect(function()
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Main.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Main.TextTransparency = 0.5
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Exploits.BackgroundTransparency = 0
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Exploits.TextTransparency = 0
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Visuals.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Visuals.TextTransparency = 0.5
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Places.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Places.TextTransparency = 0.5
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Main.Visible = false
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Exploits.Visible = true
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Visuals.Visible = false
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Places.Visible = false
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visuals.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Main.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Main.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Exploits.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Exploits.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visuals.BackgroundTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visuals.TextTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Places.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Places.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Main.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Exploits.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Visuals.Visible = true
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Places.Visible = false
+	game.CoreGui["Pigslap-MainPiggy"].Menu.Visuals.MouseButton1Click:Connect(function()
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Main.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Main.TextTransparency = 0.5
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Exploits.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Exploits.TextTransparency = 0.5
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Visuals.BackgroundTransparency = 0
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Visuals.TextTransparency = 0
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Places.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Places.TextTransparency = 0.5
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Main.Visible = false
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Exploits.Visible = false
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Visuals.Visible = true
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Places.Visible = false
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Places.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Main.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Main.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Exploits.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Exploits.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visuals.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Visuals.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Places.BackgroundTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.Places.TextTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Main.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Exploits.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Visuals.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Places.Visible = true
+	game.CoreGui["Pigslap-MainPiggy"].Menu.Places.MouseButton1Click:Connect(function()
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Main.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Main.TextTransparency = 0.5
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Exploits.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Exploits.TextTransparency = 0.5
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Visuals.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Visuals.TextTransparency = 0.5
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Places.BackgroundTransparency = 0
+		game.CoreGui["Pigslap-MainPiggy"].Menu.Places.TextTransparency = 0
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Main.Visible = false
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Exploits.Visible = false
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Visuals.Visible = false
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Places.Visible = true
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Main.Respawn.Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-MainPiggy"].Menu.List.Main.Respawn.Button.MouseButton1Click:Connect(function()
 	    if _G.Respawn == false then
 	        _G.Respawn = true
-	        game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-	        if game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.Visible == true then
-	            if game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.Visible == true and game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu.Visible == true then
-	                for _, respawn_function in pairs(game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
+	        game.CoreGui["Pigslap-MainPiggy"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+	        if game.CoreGui.MainMenu.PlayMenu.Visible == true then
+	            if game.CoreGui.MainMenu.PlayMenu.Visible == true and game.CoreGui.MainMenu.PlayMenu.SpectateMenu.Visible == true then
+	                for _, respawn_function in pairs(game.CoreGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
 	                    if respawn_function.Name == "BecomeGhost" then
-	                        for _, disable_spectate in pairs(game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
+	                        for _, disable_spectate in pairs(game.CoreGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
 	                            if disable_spectate.Name == "BecomeGhost" then
 	                                disable_spectate.Visible = false
 	                            end
 	                        end
-	                        if not game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
+	                        if not game.CoreGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
 	                            local respawn_button = respawn_function:Clone()
-	                            respawn_button.Parent = game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu
+	                            respawn_button.Parent = game.CoreGui.MainMenu.PlayMenu.SpectateMenu
 	                            respawn_button.Name = "Respawn"
 	                            respawn_button.Text = "Respawn"
 	                            respawn_button.Visible = true
 	                            respawn_button.MouseButton1Click:Connect(function()
-	                                game.Players.LocalPlayer.PlayerGui.MainMenu.Theme:Stop()
-	                                game.Players.LocalPlayer.PlayerGui.MainMenu.Vignette.Visible = false
-	                                game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.Visible = false
+	                                game.CoreGui.MainMenu.Theme:Stop()
+	                                game.CoreGui.MainMenu.Vignette.Visible = false
+	                                game.CoreGui.MainMenu.PlayMenu.Visible = false
 	                                local player = game.Players.LocalPlayer
 	                                local character = player.Character or player.CharacterAdded:Wait()
 	                                local camera = workspace.CurrentCamera
@@ -775,18 +775,18 @@ local function WSPZD_fake_script() -- Menu.LocalScript
 	        end
 	    else
 	        _G.Respawn = false
-	        game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-	        if game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.Visible == true then
-	            if game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.Visible == true and game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu.Visible == true then
-	                for _, respawn_function in pairs(game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
+	        game.CoreGui["Pigslap-MainPiggy"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	        if game.CoreGui.MainMenu.PlayMenu.Visible == true then
+	            if game.CoreGui.MainMenu.PlayMenu.Visible == true and game.CoreGui.MainMenu.PlayMenu.SpectateMenu.Visible == true then
+	                for _, respawn_function in pairs(game.CoreGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
 	                    if respawn_function.Name == "BecomeGhost" then
-	                        for _, enable_spectate in pairs(game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
+	                        for _, enable_spectate in pairs(game.CoreGui.MainMenu.PlayMenu.SpectateMenu:GetChildren()) do
 	                            if enable_spectate.Name == "BecomeGhost" then
 	                                enable_spectate.Visible = true
 	                            end
 	                        end
-	                        if game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
-	                            game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn"):Destroy()
+	                        if game.CoreGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
+	                            game.CoreGui.MainMenu.PlayMenu.SpectateMenu:FindFirstChild("Respawn"):Destroy()
 	                        end
 	                    end
 	                end
@@ -795,37 +795,37 @@ local function WSPZD_fake_script() -- Menu.LocalScript
 	    end
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Main.DeleteBots.Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-MainPiggy"].Menu.List.Main.DeleteBots.Button.MouseButton1Click:Connect(function()
 		workspace.PiggyNPC:ClearAllChildren()
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Exploits.GodMode.Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-MainPiggy"].Menu.List.Exploits.GodMode.Button.MouseButton1Click:Connect(function()
 		if _G.GodMode == false then
 			_G.GodMode = true
-			game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Exploits.GodMode.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			game.CoreGui["Pigslap-MainPiggy"].Menu.List.Exploits.GodMode.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 		else
 			_G.GodMode = false
-			game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Exploits.GodMode.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			game.CoreGui["Pigslap-MainPiggy"].Menu.List.Exploits.GodMode.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 		end
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Visuals["2021Revert"].Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-MainPiggy"].Menu.List.Visuals["2021Revert"].Button.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/mainpiggy/revert_2021.lua", true))()
-		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Visuals["2021Revert"]:Destroy()
+		game.CoreGui["Pigslap-MainPiggy"].Menu.List.Visuals["2021Revert"]:Destroy()
 	end)
 	
 	workspace.GameFolder.MainInfo:GetPropertyChangedSignal("Value"):Connect(function()
 	    if workspace.GameFolder.MainInfo.Value == "Game Over" then
 	        task.wait(4)
-	        game.Players.LocalPlayer.PlayerGui.MainMenu.Title.Visible = true
-	        game.Players.LocalPlayer.PlayerGui.MainMenu.Play.Visible = true
-	        game.Players.LocalPlayer.PlayerGui.MainMenu.ItemsFrame.Visible = true
-	        game.Players.LocalPlayer.PlayerGui.MainMenu.SkinsFrame.Visible = true
-	        game.Players.LocalPlayer.PlayerGui.MainMenu.PagesFrame.Visible = true
-	        game.Players.LocalPlayer.PlayerGui.MainMenu.BuildFrame.Visible = true
-	        game.Players.LocalPlayer.PlayerGui.MainMenu.Vignette.Visible = true
-	        game.Players.LocalPlayer.PlayerGui.MainMenu.BookTPButton.Visible = true
-	        game.Players.LocalPlayer.PlayerGui.MainMenu.FlashLight.Visible = true
+	        game.CoreGui.MainMenu.Title.Visible = true
+	        game.CoreGui.MainMenu.Play.Visible = true
+	        game.CoreGui.MainMenu.ItemsFrame.Visible = true
+	        game.CoreGui.MainMenu.SkinsFrame.Visible = true
+	        game.CoreGui.MainMenu.PagesFrame.Visible = true
+	        game.CoreGui.MainMenu.BuildFrame.Visible = true
+	        game.CoreGui.MainMenu.Vignette.Visible = true
+	        game.CoreGui.MainMenu.BookTPButton.Visible = true
+	        game.CoreGui.MainMenu.FlashLight.Visible = true
 	        game.Players.LocalPlayer.Character:PivotTo(workspace.GameFolder.ResetSpawn.CFrame)
 	        game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").Health = 0
 	    end
@@ -849,7 +849,7 @@ local function WSPZD_fake_script() -- Menu.LocalScript
 	end
 	local function createPlaceButtons(places)
 	    for _, place in ipairs(places) do
-	        local button = game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Places.Template:Clone()
+	        local button = game.CoreGui["Pigslap-MainPiggy"].Menu.List.Places.Template:Clone()
 	        button.Text = place.name
 	        button.MouseButton1Click:Connect(function()
 	            teleportService:Teleport(place.id)
