@@ -992,25 +992,25 @@ local function AJOBQE_fake_script() -- Menu.LocalScript
 	    if _G.Respawn == false then
 	        _G.Respawn = true
 	        game.CoreGui["Pigslap-JS"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-	        if game.CoreGui.MainGui.PlayMenu.Visible == true then
-	            if game.CoreGui.MainGui.PlayMenu.Visible == true and game.CoreGui.MainGui.PlayMenu.SpectateMenu.Visible == true then
-	                for _, respawn_function in pairs(game.CoreGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
+	        if game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.Visible == true then
+	            if game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.Visible == true and game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu.Visible == true then
+	                for _, respawn_function in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
 	                    if respawn_function.Name == "Back" then
-	                        for _, disable_spectate in pairs(game.CoreGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
+	                        for _, disable_spectate in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
 	                            if disable_spectate.Name == "Back" then
 	                                disable_spectate.Visible = false
 	                            end
 	                        end
-	                        if not game.CoreGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
+	                        if not game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
 	                            local respawn_button = respawn_function:Clone()
-	                            respawn_button.Parent = game.CoreGui.MainGui.PlayMenu.SpectateMenu
+	                            respawn_button.Parent = game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu
 	                            respawn_button.Name = "Respawn"
 	                            respawn_button.Text = "Respawn"
 	                            respawn_button.Visible = true
 	                            respawn_button.MouseButton1Click:Connect(function()
-	                                game.CoreGui.MainGui.Theme:Stop()
-	                                game.CoreGui.MainGui.Vignette.Visible = false
-	                                game.CoreGui.MainGui.PlayMenu.Visible = false
+	                                game.Players.LocalPlayer.PlayerGui.MainGui.Theme:Stop()
+	                                game.Players.LocalPlayer.PlayerGui.MainGui.Vignette.Visible = false
+	                                game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.Visible = false
 	                                local player = game.Players.LocalPlayer
 	                                local character = player.Character or player.CharacterAdded:Wait()
 	                                local camera = workspace.CurrentCamera
@@ -1033,17 +1033,17 @@ local function AJOBQE_fake_script() -- Menu.LocalScript
 	    else
 	        _G.Respawn = false
 	        game.CoreGui["Pigslap-JS"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-	        if game.CoreGui.MainGui.PlayMenu.Visible == true then
-	            if game.CoreGui.MainGui.PlayMenu.Visible == true and game.CoreGui.MainGui.PlayMenu.SpectateMenu.Visible == true then
-	                for _, respawn_function in pairs(game.CoreGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
+	        if game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.Visible == true then
+	            if game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.Visible == true and game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu.Visible == true then
+	                for _, respawn_function in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
 	                    if respawn_function.Name == "Back" then
-	                        for _, enable_spectate in pairs(game.CoreGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
+	                        for _, enable_spectate in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
 	                            if enable_spectate.Name == "Back" then
 	                                enable_spectate.Visible = true
 	                            end
 	                        end
-	                        if game.CoreGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
-	                            game.CoreGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn"):Destroy()
+	                        if game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
+	                            game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn"):Destroy()
 	                        end
 	                    end
 	                end
