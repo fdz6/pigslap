@@ -66,7 +66,7 @@ local OpenMenu = Instance.new("TextButton")
 --Properties:
 
 PigslapJS.Name = "Pigslap-JS"
-PigslapJS.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PigslapJS.Parent = game.CoreGui
 PigslapJS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Menu.Name = "Menu"
@@ -818,11 +818,11 @@ local function AJOBQE_fake_script() -- Menu.LocalScript
 	_G.CustomAnnouncement = false
 	_G.SystemMessage = false
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Archivable = true
+	game.CoreGui["Pigslap-JS"].Archivable = true
 	
 	local UIS = game:GetService('UserInputService')
-	local dragLocation = game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Drag
-	local frame = game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu
+	local dragLocation = game.CoreGui["Pigslap-JS"].Menu.Drag
+	local frame = game.CoreGui["Pigslap-JS"].Menu
 	local dragToggle = nil
 	local dragSpeed = 0.15
 	local dragStart = nil
@@ -856,84 +856,84 @@ local function AJOBQE_fake_script() -- Menu.LocalScript
 		end
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].OpenMenu.MouseButton1Click:Connect(function()
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visible = true
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].OpenMenu.Visible = false
+	game.CoreGui["Pigslap-JS"].OpenMenu.MouseButton1Click:Connect(function()
+	    game.CoreGui["Pigslap-JS"].Menu.Visible = true
+	    game.CoreGui["Pigslap-JS"].OpenMenu.Visible = false
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Minimize.MouseButton1Click:Connect(function()
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].OpenMenu.Visible = true
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visible = false
+	game.CoreGui["Pigslap-JS"].Menu.Minimize.MouseButton1Click:Connect(function()
+	    game.CoreGui["Pigslap-JS"].OpenMenu.Visible = true
+	    game.CoreGui["Pigslap-JS"].Menu.Visible = false
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Close.MouseButton1Click:Connect(function()
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"]:Destroy()
+	game.CoreGui["Pigslap-JS"].Menu.Close.MouseButton1Click:Connect(function()
+	    game.CoreGui["Pigslap-JS"]:Destroy()
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Main.MouseButton1Click:Connect(function()
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Main.BackgroundTransparency = 0
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Main.TextTransparency = 0
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Exploits.BackgroundTransparency = 0.7
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Exploits.TextTransparency = 0.5
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visuals.BackgroundTransparency = 0.7
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visuals.TextTransparency = 0.5
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Places.BackgroundTransparency = 0.7
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Places.TextTransparency = 0.5
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.Visible = true
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.Visible = false
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Visuals.Visible = false
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Places.Visible = false
+	game.CoreGui["Pigslap-JS"].Menu.Main.MouseButton1Click:Connect(function()
+	    game.CoreGui["Pigslap-JS"].Menu.Main.BackgroundTransparency = 0
+	    game.CoreGui["Pigslap-JS"].Menu.Main.TextTransparency = 0
+	    game.CoreGui["Pigslap-JS"].Menu.Exploits.BackgroundTransparency = 0.7
+	    game.CoreGui["Pigslap-JS"].Menu.Exploits.TextTransparency = 0.5
+	    game.CoreGui["Pigslap-JS"].Menu.Visuals.BackgroundTransparency = 0.7
+	    game.CoreGui["Pigslap-JS"].Menu.Visuals.TextTransparency = 0.5
+	    game.CoreGui["Pigslap-JS"].Menu.Places.BackgroundTransparency = 0.7
+	    game.CoreGui["Pigslap-JS"].Menu.Places.TextTransparency = 0.5
+	    game.CoreGui["Pigslap-JS"].Menu.List.Main.Visible = true
+	    game.CoreGui["Pigslap-JS"].Menu.List.Exploits.Visible = false
+	    game.CoreGui["Pigslap-JS"].Menu.List.Visuals.Visible = false
+	    game.CoreGui["Pigslap-JS"].Menu.List.Places.Visible = false
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Exploits.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Main.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Main.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Exploits.BackgroundTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Exploits.TextTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visuals.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visuals.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Places.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Places.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.Visible = true
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Visuals.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Places.Visible = false
+	game.CoreGui["Pigslap-JS"].Menu.Exploits.MouseButton1Click:Connect(function()
+		game.CoreGui["Pigslap-JS"].Menu.Main.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-JS"].Menu.Main.TextTransparency = 0.5
+		game.CoreGui["Pigslap-JS"].Menu.Exploits.BackgroundTransparency = 0
+		game.CoreGui["Pigslap-JS"].Menu.Exploits.TextTransparency = 0
+		game.CoreGui["Pigslap-JS"].Menu.Visuals.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-JS"].Menu.Visuals.TextTransparency = 0.5
+		game.CoreGui["Pigslap-JS"].Menu.Places.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-JS"].Menu.Places.TextTransparency = 0.5
+		game.CoreGui["Pigslap-JS"].Menu.List.Main.Visible = false
+		game.CoreGui["Pigslap-JS"].Menu.List.Exploits.Visible = true
+		game.CoreGui["Pigslap-JS"].Menu.List.Visuals.Visible = false
+		game.CoreGui["Pigslap-JS"].Menu.List.Places.Visible = false
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visuals.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Main.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Main.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Exploits.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Exploits.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visuals.BackgroundTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visuals.TextTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Places.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Places.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Visuals.Visible = true
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Places.Visible = false
+	game.CoreGui["Pigslap-JS"].Menu.Visuals.MouseButton1Click:Connect(function()
+		game.CoreGui["Pigslap-JS"].Menu.Main.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-JS"].Menu.Main.TextTransparency = 0.5
+		game.CoreGui["Pigslap-JS"].Menu.Exploits.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-JS"].Menu.Exploits.TextTransparency = 0.5
+		game.CoreGui["Pigslap-JS"].Menu.Visuals.BackgroundTransparency = 0
+		game.CoreGui["Pigslap-JS"].Menu.Visuals.TextTransparency = 0
+		game.CoreGui["Pigslap-JS"].Menu.Places.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-JS"].Menu.Places.TextTransparency = 0.5
+		game.CoreGui["Pigslap-JS"].Menu.List.Main.Visible = false
+		game.CoreGui["Pigslap-JS"].Menu.List.Exploits.Visible = false
+		game.CoreGui["Pigslap-JS"].Menu.List.Visuals.Visible = true
+		game.CoreGui["Pigslap-JS"].Menu.List.Places.Visible = false
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Places.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Main.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Main.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Exploits.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Exploits.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visuals.BackgroundTransparency = 0.7
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Visuals.TextTransparency = 0.5
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Places.BackgroundTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.Places.TextTransparency = 0
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Visuals.Visible = false
-		game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Places.Visible = true
+	game.CoreGui["Pigslap-JS"].Menu.Places.MouseButton1Click:Connect(function()
+		game.CoreGui["Pigslap-JS"].Menu.Main.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-JS"].Menu.Main.TextTransparency = 0.5
+		game.CoreGui["Pigslap-JS"].Menu.Exploits.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-JS"].Menu.Exploits.TextTransparency = 0.5
+		game.CoreGui["Pigslap-JS"].Menu.Visuals.BackgroundTransparency = 0.7
+		game.CoreGui["Pigslap-JS"].Menu.Visuals.TextTransparency = 0.5
+		game.CoreGui["Pigslap-JS"].Menu.Places.BackgroundTransparency = 0
+		game.CoreGui["Pigslap-JS"].Menu.Places.TextTransparency = 0
+		game.CoreGui["Pigslap-JS"].Menu.List.Main.Visible = false
+		game.CoreGui["Pigslap-JS"].Menu.List.Exploits.Visible = false
+		game.CoreGui["Pigslap-JS"].Menu.List.Visuals.Visible = false
+		game.CoreGui["Pigslap-JS"].Menu.List.Places.Visible = true
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.Commands.Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-JS"].Menu.List.Main.Commands.Button.MouseButton1Click:Connect(function()
 	    if _G.Commands == false then
 	        _G.Commands = true
-	        game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.Commands.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+	        game.CoreGui["Pigslap-JS"].Menu.List.Main.Commands.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 	        for _, v in pairs(game:GetDescendants()) do
 	            if v.Name == "VipOpen" and v.Name == "Vip" then
 	                v.Visible = true
@@ -941,7 +941,7 @@ local function AJOBQE_fake_script() -- Menu.LocalScript
 	        end
 	    else
 	        _G.Commands = false
-	        game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.Commands.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	        game.CoreGui["Pigslap-JS"].Menu.List.Main.Commands.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 	        for _, v in pairs(game:GetDescendants()) do
 	            if v.Name == "VipOpen" and v.Name == "Vip" then
 	                v.Visible = false
@@ -950,7 +950,7 @@ local function AJOBQE_fake_script() -- Menu.LocalScript
 	    end
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.ManipulateShop.Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-JS"].Menu.List.Main.ManipulateShop.Button.MouseButton1Click:Connect(function()
 	    for _, v in pairs(game:GetDescendants()) do
 	        if v.Name == "ShopMenu" then
 	            for _, v in pairs(game:GetDescendants()) do
@@ -985,32 +985,32 @@ local function AJOBQE_fake_script() -- Menu.LocalScript
 	            end
 	        end
 	    end
-	    game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.ManipulateShop:Destroy()
+	    game.CoreGui["Pigslap-JS"].Menu.List.Main.ManipulateShop:Destroy()
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.Respawn.Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-JS"].Menu.List.Main.Respawn.Button.MouseButton1Click:Connect(function()
 	    if _G.Respawn == false then
 	        _G.Respawn = true
-	        game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-	        if game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.Visible == true then
-	            if game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.Visible == true and game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu.Visible == true then
-	                for _, respawn_function in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
+	        game.CoreGui["Pigslap-JS"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+	        if game.CoreGui.MainGui.PlayMenu.Visible == true then
+	            if game.CoreGui.MainGui.PlayMenu.Visible == true and game.CoreGui.MainGui.PlayMenu.SpectateMenu.Visible == true then
+	                for _, respawn_function in pairs(game.CoreGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
 	                    if respawn_function.Name == "Back" then
-	                        for _, disable_spectate in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
+	                        for _, disable_spectate in pairs(game.CoreGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
 	                            if disable_spectate.Name == "Back" then
 	                                disable_spectate.Visible = false
 	                            end
 	                        end
-	                        if not game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
+	                        if not game.CoreGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
 	                            local respawn_button = respawn_function:Clone()
-	                            respawn_button.Parent = game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu
+	                            respawn_button.Parent = game.CoreGui.MainGui.PlayMenu.SpectateMenu
 	                            respawn_button.Name = "Respawn"
 	                            respawn_button.Text = "Respawn"
 	                            respawn_button.Visible = true
 	                            respawn_button.MouseButton1Click:Connect(function()
-	                                game.Players.LocalPlayer.PlayerGui.MainGui.Theme:Stop()
-	                                game.Players.LocalPlayer.PlayerGui.MainGui.Vignette.Visible = false
-	                                game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.Visible = false
+	                                game.CoreGui.MainGui.Theme:Stop()
+	                                game.CoreGui.MainGui.Vignette.Visible = false
+	                                game.CoreGui.MainGui.PlayMenu.Visible = false
 	                                local player = game.Players.LocalPlayer
 	                                local character = player.Character or player.CharacterAdded:Wait()
 	                                local camera = workspace.CurrentCamera
@@ -1032,18 +1032,18 @@ local function AJOBQE_fake_script() -- Menu.LocalScript
 	        end
 	    else
 	        _G.Respawn = false
-	        game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-	        if game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.Visible == true then
-	            if game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.Visible == true and game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu.Visible == true then
-	                for _, respawn_function in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
+	        game.CoreGui["Pigslap-JS"].Menu.List.Main.Respawn.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	        if game.CoreGui.MainGui.PlayMenu.Visible == true then
+	            if game.CoreGui.MainGui.PlayMenu.Visible == true and game.CoreGui.MainGui.PlayMenu.SpectateMenu.Visible == true then
+	                for _, respawn_function in pairs(game.CoreGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
 	                    if respawn_function.Name == "Back" then
-	                        for _, enable_spectate in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
+	                        for _, enable_spectate in pairs(game.CoreGui.MainGui.PlayMenu.SpectateMenu:GetChildren()) do
 	                            if enable_spectate.Name == "Back" then
 	                                enable_spectate.Visible = true
 	                            end
 	                        end
-	                        if game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
-	                            game.Players.LocalPlayer.PlayerGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn"):Destroy()
+	                        if game.CoreGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn") then
+	                            game.CoreGui.MainGui.PlayMenu.SpectateMenu:FindFirstChild("Respawn"):Destroy()
 	                        end
 	                    end
 	                end
@@ -1052,52 +1052,52 @@ local function AJOBQE_fake_script() -- Menu.LocalScript
 	    end
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.SkipTimer.Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-JS"].Menu.List.Exploits.SkipTimer.Button.MouseButton1Click:Connect(function()
 		game.ReplicatedStorage.SkipTimer:FireServer()
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.PauseTimer.Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-JS"].Menu.List.Exploits.PauseTimer.Button.MouseButton1Click:Connect(function()
 		if _G.Paused == false then
 			_G.Paused = true
 			game.ReplicatedStorage.PauseTimer:FireServer()
-			game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.PauseTimer.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			game.CoreGui["Pigslap-JS"].Menu.List.Exploits.PauseTimer.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 		else
 			_G.Paused = false
 			game.ReplicatedStorage.UnPauseTimer:FireServer()
-			game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.PauseTimer.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			game.CoreGui["Pigslap-JS"].Menu.List.Exploits.PauseTimer.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 		end
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.CustomAnnouncement.Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-JS"].Menu.List.Exploits.CustomAnnouncement.Button.MouseButton1Click:Connect(function()
 		if _G.CustomAnnouncement == false then
 			_G.CustomAnnouncement = true
-			game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.CustomAnnouncement.Visible = true
-			game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.CustomAnnouncement.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			game.CoreGui["Pigslap-JS"].Menu.List.CustomAnnouncement.Visible = true
+			game.CoreGui["Pigslap-JS"].Menu.List.Exploits.CustomAnnouncement.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 		else
 			_G.CustomAnnouncement = false
-			game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.CustomAnnouncement.Visible = false
-			game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.CustomAnnouncement.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			game.CoreGui["Pigslap-JS"].Menu.List.CustomAnnouncement.Visible = false
+			game.CoreGui["Pigslap-JS"].Menu.List.Exploits.CustomAnnouncement.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 		end
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.SystemMessage.Button.MouseButton1Click:Connect(function()
+	game.CoreGui["Pigslap-JS"].Menu.List.Exploits.SystemMessage.Button.MouseButton1Click:Connect(function()
 		if _G.SystemMessage == false then
 			_G.SystemMessage = true
-			game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.SystemMessage.Visible = true
-			game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.SystemMessage.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			game.CoreGui["Pigslap-JS"].Menu.List.SystemMessage.Visible = true
+			game.CoreGui["Pigslap-JS"].Menu.List.Exploits.SystemMessage.Button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 		else
 			_G.SystemMessage = false
-			game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.SystemMessage.Visible = false
-			game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Exploits.SystemMessage.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			game.CoreGui["Pigslap-JS"].Menu.List.SystemMessage.Visible = false
+			game.CoreGui["Pigslap-JS"].Menu.List.Exploits.SystemMessage.Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 		end
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.CustomAnnouncement.Frame.Button.MouseButton1Click:Connect(function()
-		game.ReplicatedStorage.CustomAnnouncement:FireServer(game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.CustomAnnouncement.Frame.TextBox.Text)
+	game.CoreGui["Pigslap-JS"].Menu.List.CustomAnnouncement.Frame.Button.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.CustomAnnouncement:FireServer(game.CoreGui["Pigslap-JS"].Menu.List.CustomAnnouncement.Frame.TextBox.Text)
 	end)
 	
-	game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.SystemMessage.Frame.Button.MouseButton1Click:Connect(function()
-		game.ReplicatedStorage.Remotes.SystemMessage:FireServer(game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.SystemMessage.Frame.TextBox.Text)
+	game.CoreGui["Pigslap-JS"].Menu.List.SystemMessage.Frame.Button.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.Remotes.SystemMessage:FireServer(game.CoreGui["Pigslap-JS"].Menu.List.SystemMessage.Frame.TextBox.Text)
 	end)
 	
 	local teleportService = game:GetService("TeleportService")
@@ -1118,7 +1118,7 @@ local function AJOBQE_fake_script() -- Menu.LocalScript
 	end
 	local function createPlaceButtons(places)
 	    for _, place in ipairs(places) do
-	        local button = game.Players.LocalPlayer.PlayerGui["Pigslap-JS"].Menu.List.Places.Template:Clone()
+	        local button = game.CoreGui["Pigslap-JS"].Menu.List.Places.Template:Clone()
 	        button.Text = place.name
 	        button.MouseButton1Click:Connect(function()
 	            teleportService:Teleport(place.id)
