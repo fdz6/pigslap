@@ -796,7 +796,7 @@ local function WSPZD_fake_script() -- Menu.LocalScript
 	end)
 	
 	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Main.DeleteBots.Button.MouseButton1Click:Connect(function()
-		workspace.PeppaNPC:ClearAllChildren()
+		workspace.PiggyNPC:ClearAllChildren()
 	end)
 	
 	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Exploits.GodMode.Button.MouseButton1Click:Connect(function()
