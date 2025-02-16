@@ -782,14 +782,8 @@ local function rejoinServer()
 	local success, errorMessage = pcall(function()
 		local jobId = game.JobId
 		local placeId = game.PlaceId
-
-		if game.PrivateServerId ~= "" then
-			TeleportService:TeleportToPrivateServer(placeId, game.PrivateServerId, {player})
-		else
-			TeleportService:TeleportToPlaceInstance(placeId, jobId, player)
-		end
+		TeleportService:TeleportToPlaceInstance(placeId, jobId, player)
 	end)
-
 	if not success then
 		warn("Failed to rejoin server: " .. errorMessage)
 	end
