@@ -810,7 +810,7 @@ local function WSPZD_fake_script() -- Menu.LocalScript
 	end)
 	
 	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Visuals["2021Revert"].Button.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/mainpiggy/revert_2021.lua", true))
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/mainpiggy/revert_2021.lua", true))()
 		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Visuals["2021Revert"]:Destroy()
 	end)
 	
