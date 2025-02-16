@@ -33,11 +33,14 @@ local Title_6 = Instance.new("TextLabel")
 local Three = Instance.new("Frame")
 local Button_6 = Instance.new("TextButton")
 local Title_7 = Instance.new("TextLabel")
+local _2021Revert = Instance.new("Frame")
+local Button_7 = Instance.new("TextButton")
+local Title_8 = Instance.new("TextLabel")
 local Places = Instance.new("Frame")
 local UIGridLayout_4 = Instance.new("UIGridLayout")
 local Template = Instance.new("Frame")
-local Button_7 = Instance.new("TextButton")
-local Title_8 = Instance.new("TextLabel")
+local Button_8 = Instance.new("TextButton")
+local Title_9 = Instance.new("TextLabel")
 local Minimize = Instance.new("TextButton")
 local Drag = Instance.new("TextLabel")
 local Places_2 = Instance.new("TextButton")
@@ -428,6 +431,43 @@ Title_7.TextScaled = true
 Title_7.TextSize = 14.000
 Title_7.TextWrapped = true
 
+_2021Revert.Name = "2021Revert"
+_2021Revert.Parent = Visuals_2
+_2021Revert.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+_2021Revert.BackgroundTransparency = 1.000
+_2021Revert.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_2021Revert.BorderSizePixel = 0
+_2021Revert.Position = UDim2.new(0.337427288, 0, 0.311239183, 0)
+_2021Revert.Size = UDim2.new(0.421236753, 0, 0.0876916423, 0)
+
+Button_7.Name = "Button"
+Button_7.Parent = _2021Revert
+Button_7.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Button_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_7.BorderSizePixel = 4
+Button_7.Position = UDim2.new(0.813611388, 0, 0, 0)
+Button_7.Size = UDim2.new(0.186388567, 0, 1, 0)
+Button_7.Font = Enum.Font.GothamBold
+Button_7.Text = ""
+Button_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_7.TextScaled = true
+Button_7.TextSize = 14.000
+Button_7.TextWrapped = true
+
+Title_8.Name = "Title"
+Title_8.Parent = _2021Revert
+Title_8.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Title_8.BackgroundTransparency = 0.200
+Title_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_8.BorderSizePixel = 4
+Title_8.Size = UDim2.new(0.780175269, 0, 1.00000012, 0)
+Title_8.Font = Enum.Font.GothamBold
+Title_8.Text = "Revert to 2021"
+Title_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_8.TextScaled = true
+Title_8.TextSize = 14.000
+Title_8.TextWrapped = true
+
 Places.Name = "Places"
 Places.Parent = List
 Places.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
@@ -454,33 +494,33 @@ Template.Position = UDim2.new(0.337427288, 0, 0.311239183, 0)
 Template.Size = UDim2.new(0.421236753, 0, 0.0876916423, 0)
 Template.Visible = false
 
-Button_7.Name = "Button"
-Button_7.Parent = Template
-Button_7.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-Button_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_7.BorderSizePixel = 4
-Button_7.Position = UDim2.new(0.813611388, 0, 0, 0)
-Button_7.Size = UDim2.new(0.186388567, 0, 1, 0)
-Button_7.Font = Enum.Font.GothamBold
-Button_7.Text = "TP"
-Button_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button_7.TextScaled = true
-Button_7.TextSize = 14.000
-Button_7.TextWrapped = true
+Button_8.Name = "Button"
+Button_8.Parent = Template
+Button_8.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Button_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_8.BorderSizePixel = 4
+Button_8.Position = UDim2.new(0.813611388, 0, 0, 0)
+Button_8.Size = UDim2.new(0.186388567, 0, 1, 0)
+Button_8.Font = Enum.Font.GothamBold
+Button_8.Text = "TP"
+Button_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_8.TextScaled = true
+Button_8.TextSize = 14.000
+Button_8.TextWrapped = true
 
-Title_8.Name = "Title"
-Title_8.Parent = Template
-Title_8.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Title_8.BackgroundTransparency = 0.200
-Title_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Title_8.BorderSizePixel = 4
-Title_8.Size = UDim2.new(0.780175269, 0, 1.00000012, 0)
-Title_8.Font = Enum.Font.GothamBold
-Title_8.Text = "???"
-Title_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title_8.TextScaled = true
-Title_8.TextSize = 14.000
-Title_8.TextWrapped = true
+Title_9.Name = "Title"
+Title_9.Parent = Template
+Title_9.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Title_9.BackgroundTransparency = 0.200
+Title_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_9.BorderSizePixel = 4
+Title_9.Size = UDim2.new(0.780175269, 0, 1.00000012, 0)
+Title_9.Font = Enum.Font.GothamBold
+Title_9.Text = "???"
+Title_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_9.TextScaled = true
+Title_9.TextSize = 14.000
+Title_9.TextWrapped = true
 
 Minimize.Name = "Minimize"
 Minimize.Parent = Menu
@@ -542,7 +582,8 @@ OpenMenu.TextWrapped = true
 
 -- Scripts:
 
-local function OXZRZQ_fake_script() -- Menu.LocalScript
+local function WSPZD_fake_script() -- Menu.LocalScript 
+
 	_G.Respawn = false
 	_G.GodMode = false
 	
@@ -768,6 +809,11 @@ local function OXZRZQ_fake_script() -- Menu.LocalScript
 		end
 	end)
 	
+	game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Visuals["2021Revert"].Button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/mainpiggy/revert_2021.lua", true))
+		game.Players.LocalPlayer.PlayerGui["Pigslap-MainPiggy"].Menu.List.Visuals["2021Revert"]:Destroy()
+	end)
+	
 	workspace.GameFolder.MainInfo:GetPropertyChangedSignal("Value"):Connect(function()
 	    if workspace.GameFolder.MainInfo.Value == "Game Over" then
 	        task.wait(4)
@@ -860,4 +906,4 @@ local function OXZRZQ_fake_script() -- Menu.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CanTouch = true
 	end
 end
-coroutine.wrap(OXZRZQ_fake_script)()
+coroutine.wrap(WSPZD_fake_script)()
