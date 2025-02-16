@@ -20,7 +20,7 @@ local Drag = Instance.new("TextLabel")
 --Properties:
 
 PigslapInstaller.Name = "PigslapInstaller"
-PigslapInstaller.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PigslapInstaller.Parent = game.CoreGui
 PigslapInstaller.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Menu.Name = "Menu"
@@ -46,7 +46,7 @@ Close.TextScaled = true
 Close.TextSize = 14.000
 Close.TextWrapped = true
 Close.MouseButton1Click:Connect(function()
-    game.Players.LocalPlayer.PlayerGui.PigslapInstaller:Destroy()
+	game.CoreGui.PigslapInstaller:Destroy()
 end)
 
 Title.Name = "Title"
@@ -115,8 +115,8 @@ MainPiggy.TextScaled = true
 MainPiggy.TextSize = 14.000
 MainPiggy.TextWrapped = true
 MainPiggy.MouseButton1Click:Connect(function()
-    game.Players.LocalPlayer.PlayerGui.PigslapInstaller:Destroy()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/mainpiggy/mainpiggy.lua", true))()
+	game.CoreGui.PigslapInstaller:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/mainpiggy/mainpiggy.lua", true))()
 end)
 
 ChinesePiggy.Name = "ChinesePiggy"
@@ -133,8 +133,8 @@ ChinesePiggy.TextScaled = true
 ChinesePiggy.TextSize = 14.000
 ChinesePiggy.TextWrapped = true
 ChinesePiggy.MouseButton1Click:Connect(function()
-    game.Players.LocalPlayer.PlayerGui.PigslapInstaller:Destroy()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/chinesepiggy/chinesepiggy.lua", true))()
+	game.CoreGui.PigslapInstaller:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/chinesepiggy/chinesepiggy.lua", true))()
 end)
 
 EpicTankEngine.Name = "EpicTankEngine"
@@ -165,8 +165,8 @@ JSKit.TextScaled = true
 JSKit.TextSize = 14.000
 JSKit.TextWrapped = true
 JSKit.MouseButton1Click:Connect(function()
-    game.Players.LocalPlayer.PlayerGui.PigslapInstaller:Destroy()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/js/js.lua", true))()
+	game.CoreGui.PigslapInstaller:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fdz6/pigslap/refs/heads/main/js/js.lua", true))()
 end)
 
 PacifistKit.Name = "PacifistKit"
@@ -214,37 +214,37 @@ Drag.TextWrapped = true
 -- Scripts:
 
 local UIS = game:GetService('UserInputService')
-local dragLocation = game.Players.LocalPlayer.PlayerGui.PigslapInstaller.Menu.Drag
-local frame = game.Players.LocalPlayer.PlayerGui.PigslapInstaller.Menu
+local dragLocation = game.CoreGui.PigslapInstaller.Menu.Drag
+local frame = game.CoreGui.PigslapInstaller.Menu
 local dragToggle = nil
 local dragSpeed = 0.15
 local dragStart = nil
 local startPos = nil
 
 local function updateInput(input)
-    local delta = input.Position - dragStart
-    local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-        startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-    game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	local delta = input.Position - dragStart
+	local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+		startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 end
 
 dragLocation.InputBegan:Connect(function(input)
-    if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-        dragToggle = true
-        dragStart = input.Position
-        startPos = frame.Position
-        input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                dragToggle = false
-            end
-        end)
-    end
+	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+		dragToggle = true
+		dragStart = input.Position
+		startPos = frame.Position
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragToggle = false
+			end
+		end)
+	end
 end)
 
 UIS.InputChanged:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-        if dragToggle then
-            updateInput(input)
-        end
-    end
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		if dragToggle then
+			updateInput(input)
+		end
+	end
 end)
