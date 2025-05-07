@@ -61,7 +61,7 @@ if not MainMenu:FindFirstChild("Play_2021") then
 
 	MainMenu.SkinsFrame.BackgroundTransparency = 1
 	for _, contents_skins in pairs(MainMenu.SkinsFrame:GetChildren()) do
-		if contents_skins.Name ~= "ShopMenu" and not contents_skins:IsA("Script") then
+		if contents_skins.Name ~= "ShopMenu" and not contents_skins:IsA("Script") and not contents_skins:IsA("UIStroke") and not contents_skins:IsA("UICorner") then
 			contents_skins.Visible = false
 		end
 	end
