@@ -681,7 +681,6 @@ if not MainMenu:FindFirstChild("Play_2021") then
 			MainMenu.MainScreen.Visible = false
 			MainMenu.FlashLight.Visible = false
 			MainMenu.FoundBlueprintBar.Visible = false
-			MainMenu.PlayMenu.VotingMenu.ResultsMenu.Visible = false
 			if l__LocalPlayer__6.PlayerGui:FindFirstChild("CampaignUI") then
 				l__LocalPlayer__6.PlayerGui:FindFirstChild("CampaignUI"):Destroy()
 			end
