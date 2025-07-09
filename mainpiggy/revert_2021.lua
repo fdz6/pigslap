@@ -125,6 +125,8 @@ if not MainMenu:FindFirstChild("Play_2021") then
 		local LastRound = Instance.new("TextLabel")
 		local ChapterImage = Instance.new("ImageLabel")
 		local UICorner_7 = Instance.new("UICorner")
+		
+		task.wait(1)
 
 		--Properties:
 
