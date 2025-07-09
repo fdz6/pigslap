@@ -17,23 +17,20 @@ if not MainMenu:FindFirstChild("Play_2021") then
 	Fake_Title.Position = UDim2.new(-2.31861877, 0, -5.59207821, 0)
 	Fake_Title.Size = UDim2.new(6.74556494, 0, 4.50578308, 0)
 	Fake_Title.Image = "http://www.roblox.com/asset/?id=4637640091"
-	
-	if MainMenu:FindFirstChild("MainScript") then
-		MainMenu.MainScript.Enabled = false
-	end
+	Fake_Title.Visible = true
 	
 	local function playmenu_modification()
 		local PlayMenu = MainMenu.PlayMenu
-		PlayMenu:ClearAllChildren()
-		task.wait(0.5)
-		local PlayerList = Instance.new("Frame")
+		local PlayerList = PlayMenu.PlayerList
+		PlayerList:Destroy()
+		local NewPlayerList = Instance.new("Frame")
 		local List = Instance.new("Frame")
 		local UIListLayout = Instance.new("UIListLayout")
 		local Title = Instance.new("Frame")
 		local PlayerName = Instance.new("TextLabel")
 		local UICorner = Instance.new("UICorner")
 		local Players = Instance.new("TextLabel")
-		local Back = Instance.new("TextButton")
+		local Back = PlayMenu.Back
 		local SpectateMenu = Instance.new("Frame")
 		local CurrentPlayer = Instance.new("TextLabel")
 		local Next = Instance.new("TextButton")
@@ -42,7 +39,7 @@ if not MainMenu:FindFirstChild("Play_2021") then
 		local UICorner_2 = Instance.new("UICorner")
 		local Frame = Instance.new("Frame")
 		local UICorner_3 = Instance.new("UICorner")
-		local VotingMenu = Instance.new("Frame")
+		local VotingMenu = PlayMenu.VotingMenu
 		local CurrentPhase = Instance.new("TextLabel")
 		local MapVoting = Instance.new("Frame")
 		local House = Instance.new("ImageButton")
@@ -129,17 +126,17 @@ if not MainMenu:FindFirstChild("Play_2021") then
 
 		--Properties:
 
-		PlayerList.Name = "PlayerList"
-		PlayerList.Parent = PlayMenu
-		PlayerList.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		PlayerList.BackgroundTransparency = 0.200
-		PlayerList.BorderColor3 = Color3.fromRGB(255, 255, 255)
-		PlayerList.BorderSizePixel = 3
-		PlayerList.Position = UDim2.new(0.242272303, 0, 0.205005944, 0)
-		PlayerList.Size = UDim2.new(0.515204728, 0, 0.15721111, 0)
+		NewPlayerList.Name = "PlayerList"
+		NewPlayerList.Parent = PlayMenu
+		NewPlayerList.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+		NewPlayerList.BackgroundTransparency = 0.200
+		NewPlayerList.BorderColor3 = Color3.fromRGB(255, 255, 255)
+		NewPlayerList.BorderSizePixel = 3
+		NewPlayerList.Position = UDim2.new(0.242272303, 0, 0.205005944, 0)
+		NewPlayerList.Size = UDim2.new(0.515204728, 0, 0.15721111, 0)
 
 		List.Name = "List"
-		List.Parent = PlayerList
+		List.Parent = NewPlayerList
 		List.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 		List.BackgroundTransparency = 1.000
 		List.BorderColor3 = Color3.fromRGB(255, 255, 255)
@@ -151,7 +148,7 @@ if not MainMenu:FindFirstChild("Play_2021") then
 		UIListLayout.Padding = UDim.new(0.0299999993, 0)
 
 		Title.Name = "Title"
-		Title.Parent = PlayerList
+		Title.Parent = NewPlayerList
 		Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 		Title.BackgroundTransparency = 0.200
 		Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -186,7 +183,7 @@ if not MainMenu:FindFirstChild("Play_2021") then
 		Players.Position = UDim2.new(0.351674974, 0, 0.15561001, 0)
 		Players.Size = UDim2.new(0.296151072, 0, 0.0485441498, 0)
 		Players.Font = Enum.Font.Garamond
-		Players.Text = "Players in Lobby"
+		Players.Text = "Players"
 		Players.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Players.TextScaled = true
 		Players.TextSize = 14.000
@@ -208,6 +205,7 @@ if not MainMenu:FindFirstChild("Play_2021") then
 		Back.TextSize = 14.000
 		Back.TextStrokeTransparency = 0.000
 		Back.TextWrapped = true
+		Back:ClearAllChildren()
 
 		SpectateMenu.Name = "SpectateMenu"
 		SpectateMenu.Parent = PlayMenu
@@ -292,7 +290,7 @@ if not MainMenu:FindFirstChild("Play_2021") then
 		Frame.Size = UDim2.new(1.01832962, 0, 1.1117748, 0)
 
 		UICorner_3.Parent = Frame
-
+		
 		VotingMenu.Name = "VotingMenu"
 		VotingMenu.Parent = PlayMenu
 		VotingMenu.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -305,10 +303,12 @@ if not MainMenu:FindFirstChild("Play_2021") then
 		fake_uistroke.Transparency = 1
 		fake_uistroke.Color = Color3.fromRGB(255, 255, 255)
 		fake_uistroke.Parent = VotingMenu
+		VotingMenu:ClearAllChildren()
 		while task.wait() do
 			fake_uistroke.Transparency = 1
 			VotingMenu.BorderColor3 = fake_uistroke.Color
 		end
+		task.wait(1)
 
 		CurrentPhase.Name = "CurrentPhase"
 		CurrentPhase.Parent = VotingMenu
@@ -1415,10 +1415,6 @@ if not MainMenu:FindFirstChild("Play_2021") then
 	coroutine.wrap(playmenu_modification)()
 	
 	task.wait(1)
-	
-	if MainMenu:FindFirstChild("MainScript") then
-		MainMenu.MainScript.Enabled = true
-	end
 
 	local Play_2021 = Instance.new("TextButton")
 	Play_2021.Archivable = true
