@@ -41,7 +41,8 @@ if not MainMenu:FindFirstChild("Play_2021") then
 		local UICorner_3 = Instance.new("UICorner")
 		local VotingMenu = PlayMenu.VotingMenu
 		local CurrentPhase = Instance.new("TextLabel")
-		local MapVoting = Instance.new("Frame")
+		local MapVoting = PlayMenu.VotingMenu.MapVoting
+		MapVoting:ClearAllChildren()
 		local House = Instance.new("ImageButton")
 		local Title_2 = Instance.new("TextLabel")
 		local VoteCount = Instance.new("TextLabel")
@@ -82,7 +83,8 @@ if not MainMenu:FindFirstChild("Play_2021") then
 		local Plant = Instance.new("ImageButton")
 		local Title_14 = Instance.new("TextLabel")
 		local VoteCount_13 = Instance.new("TextLabel")
-		local ModeVoting = Instance.new("Frame")
+		local ModeVoting = PlayMenu.VotingMenu.ModeVoting
+		ModeVoting:ClearAllChildren()
 		local Bot = Instance.new("ImageButton")
 		local Title_15 = Instance.new("TextLabel")
 		local VoteCount_14 = Instance.new("TextLabel")
