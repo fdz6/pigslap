@@ -18,6 +18,10 @@ if not MainMenu:FindFirstChild("Play_2021") then
 	Fake_Title.Size = UDim2.new(6.74556494, 0, 4.50578308, 0)
 	Fake_Title.Image = "http://www.roblox.com/asset/?id=4637640091"
 	
+	if MainMenu:FindFirstChild("MainScript") then
+		MainMenu.MainScript.Enabled = false
+	end
+	
 	local function playmenu_modification()
 		local PlayMenu = MainMenu.PlayMenu
 		PlayMenu:ClearAllChildren()
@@ -1411,6 +1415,10 @@ if not MainMenu:FindFirstChild("Play_2021") then
 	coroutine.wrap(playmenu_modification)()
 	
 	task.wait(1)
+	
+	if MainMenu:FindFirstChild("MainScript") then
+		MainMenu.MainScript.Enabled = true
+	end
 
 	local Play_2021 = Instance.new("TextButton")
 	Play_2021.Archivable = true
