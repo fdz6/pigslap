@@ -1013,6 +1013,14 @@ VotingMenu.BorderColor3 = Color3.fromRGB(255, 255, 255)
 VotingMenu.BorderSizePixel = 3
 VotingMenu.Position = UDim2.new(0.241999999, 0, 0.477035493, 0)
 VotingMenu.Size = UDim2.new(0.515204728, 0, 0.474327952, 0)
+local fake_uistroke = Instance.new("UIStroke")
+fake_uistroke.Transparency = 1
+fake_uistroke.Color = Color3.fromRGB(255, 255, 255)
+fake_uistroke.Parent = VotingMenu
+while task.wait() do
+	fake_uistroke.Transparency = 1
+	VotingMenu.BorderColor3 = fake_uistroke.Color
+end
 
 CurrentPhase.Name = "CurrentPhase"
 CurrentPhase.Parent = VotingMenu
