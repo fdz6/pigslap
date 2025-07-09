@@ -61,7 +61,7 @@ if not MainMenu:FindFirstChild("Play_2021") then
 
 	MainMenu.SkinsFrame.BackgroundTransparency = 1
 	for _, contents_skins in pairs(MainMenu.SkinsFrame:GetChildren()) do
-		if contents_skins.Name ~= "ShopMenu" and not contents_skins:IsA("Script") and not contents_skins:IsA("UIStroke") and not contents_skins:IsA("UICorner") then
+		if contents_skins.Name ~= "ShopMenu" and not contents_skins:IsA("Script") then
 			contents_skins.Visible = false
 		end
 	end
@@ -666,7 +666,7 @@ if not MainMenu:FindFirstChild("Play_2021") then
 			MainMenu.ItemsFrame.Visible = false
 			MainMenu.PagesFrame.Visible = false
 			MainMenu.BuildFrame.Visible = false
-			MainMenu.BookTPButton.Visible = false
+			MainMenu.MainScreen.Visible = false
 			MainMenu.FlashLight.Visible = false
 			MainMenu.FoundBlueprintBar.Visible = false
 			MainMenu.PlayMenu.VotingMenu.ResultsMenu.Visible = false
@@ -769,35 +769,4 @@ if not MainMenu:FindFirstChild("Play_2021") then
 			workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
 		end
 	end)
-end
-
--- Temporary Scripts
-
-local Players = game:GetService("Players")
-local TeleportService = game:GetService("TeleportService")
-
-local player = Players.LocalPlayer
-
-local function rejoinServer()
-	local success, errorMessage = pcall(function()
-		local jobId = game.JobId
-		local placeId = game.PlaceId
-		TeleportService:TeleportToPlaceInstance(placeId, jobId, player)
-	end)
-	if not success then
-		warn("Failed to rejoin server: " .. errorMessage)
-	end
-end
-
-local function onCharacterAdded(character)
-	local humanoid = character:FindFirstChildOfClass("Humanoid")
-	if humanoid then
-		humanoid.Died:Connect(rejoinServer)
-	end
-end
-
-player.CharacterAdded:Connect(onCharacterAdded)
-
-if player.Character then
-	onCharacterAdded(player.Character)
 end
