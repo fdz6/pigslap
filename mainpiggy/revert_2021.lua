@@ -5,6 +5,18 @@ MainMenu.ResetOnSpawn = false
 
 if not MainMenu:FindFirstChild("Play_2021") then
 	game.StarterGui:SetCore("SendNotification", {Title = "Warning!", Text = "The 2021 revert is experimental & buggy!"})
+	
+	local Fake_Title = Instance.new("ImageLabel")
+	Fake_Title.Name = "Title"
+	Fake_Title.Parent = MainMenu.SkinsFrame
+	Fake_Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Fake_Title.BackgroundTransparency = 1.000
+	Fake_Title.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	Fake_Title.BorderSizePixel = 0
+	Fake_Title.Position = UDim2.new(-2.31861877, 0, -5.59207821, 0)
+	Fake_Title.Size = UDim2.new(6.74556494, 0, 4.50578308, 0)
+	Fake_Title.Image = "http://www.roblox.com/asset/?id=4637640091"
+	
 	local Play_2021 = Instance.new("TextButton")
 	Play_2021.Archivable = true
 	local BookMenu = Instance.new("Frame")
@@ -724,7 +736,9 @@ if not MainMenu:FindFirstChild("Play_2021") then
 	end)
 end
 
-local PlayMenu = game.Players.LocalPlayer.PlayerGui.MainMenu.PlayMenu
+local PlayMenu = MainMenu.PlayMenu
+PlayMenu:ClearAllChildren()
+task.wait(0.5)
 local PlayerList = Instance.new("Frame")
 local List = Instance.new("Frame")
 local UIListLayout = Instance.new("UIListLayout")
